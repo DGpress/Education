@@ -3,6 +3,32 @@
     ChangeWord_README.md is explained this simulation.
 '''
 
+def getAvailableWords(now_words, words, n):
+    '''
+        now_words : (list) it has a word or words which is root.
+        words : (list) it has words for changing.
+        n : (int) is an integer meaning length of word.
+
+        This method conducts change process.
+        Each word from now_words are compared with each word from words
+        and if word from words is possible for change, those or that is appended to result.
+        Finally, returns result.
+    '''
+    result = [] # the list for return.
+
+    for now_word in now_words:
+        for word in words:
+            count = 0 # counted number of same letter.
+            for i in range(n):
+                if now_word[i] == word[i]:
+                    # comparing words one by one letter.
+                    count += 1
+            if count == n - 1:
+                # It means that word is chagible.
+                result.append(word)
+                
+    return result
+
 def solution(begin, target, words):
     '''
         Main body
@@ -12,7 +38,7 @@ def solution(begin, target, words):
         words : (list) it has variety words.
 
         This simulation returns the least number of changing.
-        Along simulation's conditions, word is changed another word one by one spell.
+        Along simulation's conditions, word is changed another word one by one letter.
         If changed word is a target word, this simulation is ended.
         Before ending, this code block is returned the number of changes.
     '''
