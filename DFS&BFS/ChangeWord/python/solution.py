@@ -17,6 +17,14 @@ def solution(begin, target, words):
         Before ending, this code block is returned the number of changes.
     '''
     answer = 0
+
+    # Check the possibility to change to target
+    if target not in words:
+        # If target word is not existed in words,
+        # begin word is not changed to target word.
+        # This case returns 0.
+        return 0
+
     return answer
 
 # Run examples
