@@ -21,4 +21,4 @@
  * begin과 target은 같지 않습니다.
  * 변환할 수 없는 경우에는 0를 return 합니다.
 
-[출처](https://programmers.co.kr/learn/courses/30/lessons/43163?language=python3)
+[출처 : 프로그래머스](https://programmers.co.kr/learn/courses/30/lessons/43163?language=python3)
