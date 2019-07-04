@@ -24,6 +24,15 @@ def solution(begin, target, words):
         # begin word is not changed to target word.
         # This case returns 0.
         return 0
+    
+    n = len(begin) # is an integer which length of inputted all words.
+    k = len(words) # is an integer which length of inputted words list.
+
+    level = 0
+    # is an integer that means level to change.
+    conversion_path = {0 : [begin]}
+    # is a dict which has key(is an integer meaning level) and value(is a list which can store words).
+    
 
     return answer
 
